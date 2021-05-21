@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+    //  https://www.tutorialspoint.com/javascript/index.html
+
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to Javascript scripting language in one Video</h1>
+        <div id="firstContainer" class="container">
+            <button id="click" onclick="clickdata()">Click Me</button>
+        </div>
+
+        <script>
+        
+        // 1. differant type in print
+            // console.log("Demo Page");
+            // alert("rinkal");
+            // document.write("demo page");
+
+        // 2. console API
+            console.log("hello guys", 4+9, "Another log");    
+            // console.warn("it page just reload");
+            // console.error("this is an error");
+
+
+        // 3. variable
+            // what are the variable?. -> container store data values
+            // numbers
+            var num1 = 39;
+            var num2 = 39;
+            // console.log(num1+num2);
+
+        // 4. datatype
+            // string
+            var str1 = "this is a string";
+            var str2 = "this is a string2";
+            // console.log(str1);
+
+            // objects
+            var data = {
+                ramayan:940,
+                bhagvad:402,
+            }
+            // console.log(data);
+
+            //bolleans
+            var sk = true;
+            // console.log(a);
+
+            //null
+            var wo = null;
+            // console.log(a);
+
+            //undefined
+            // var a = undefined;
+            var a;
+            // console.log(a);
+
+            /* there are two type datatype in javascript
+             1 primitive datatype:undefined,null,string,bollean,number,symbol
+             2 reference datatype:array,object
+             */
+
+            //  array
+            array = [2,4,6,8,19];
+            // console.log(array[2]);
+
+        // 5. oprators
+            // airthmetic (=,-,*,/)
+            var a=10,n=10;
+            // console.log("addition is",a+n);
+
+            // assignment (+=, -=, *=, /=)
+            var b = n;  // b = b+2;
+            b += 4;
+            // console.log(b);
+
+            // comparison (==,<=,>=,<,>)
+            var x=20;
+            var y =60;
+            // console.log( x==y);
+
+            // logical (&&, ||)
+            // console.log(true && false)
+
+        // 6. function in javascript
+            function average(a,b)
+            {
+                return ((a+b)/2);
+            }
+
+            var c = average(20,20);
+            // console.log(c);
+        
+        // 7. Conditional in javascript
+            var age = 22;
+            // single statement
+            /*if(age < 34)
+            {
+                console.log("you are same age");
+            } */
+
+            // if else statement make
+        /* if(age > 24)
+            {
+                console.log("you are not kid");
+            }
+            else
+            {
+                console.log("you are younger");
+            } */
+
+            // if else statement  ladder
+            /*if(age > 30)
+            {
+                console.log('ypu are not a kid');
+            }
+            else if(age > 20)
+            {
+                console.log("ypu are young");
+            }
+            else if(age > 78)
+            {
+                console.log("ypu are olde age");
+            }
+            else
+            {
+                console.log("not mark");
+            }
+            */
+
+        // 8. loop
+            // for 
+            var arr = [1,2,3,4,6,7,8];
+            /* for(var i=0;i<arr.length; i++)
+            {
+                if(i==4)
+                {
+                    // break;
+                    continue;
+                }
+                console.log(arr[i]);
+            } */
+
+            // foreach
+            arr.forEach(function(element)
+            {
+                // console.log(element);
+            })
+
+            // while
+
+
+            // dowhile
+            
+        var myarray = ["rock","song",4,7,2,48,39];
+        // 9. array method
+            // myarray.pop(myarray); // this method remove last element of the array
+            // myarray.push("rocksong"); // this method add element in last position of array.
+            // myarray.shift(); // this method remove the first element of the array.
+            // myarray.unshift("rocksong"); // this methid add the element in first position of array
+        // console.log(myarray.toString());
+        // console.log(myarray.sort()); // sorting alphabatical
+
+
+        // 10. string method
+            let name = "rinky d makvana";
+            // console.log(name.length);
+            // console.log(name.indexOf("rinky"));
+            // console.log(name.lastIndexOf("makvana"));
+            // console.log(name.slice(1,5));
+
+        // 11. date
+            let myDate = new Date();
+            // console.log(myDate);
+            // console.log(myDate.getTime());
+            // console.log(myDate.getMonth());
+            // console.log(myDate.getDay());
+            // console.log(myDate.getFullYear());
+            // console.log(myDate.getMinutes());
+            // console.log(myDate.getHours());
+
+        // 12. documnet object manupulation
+
+        let element = document.getElementById('click');
+        // console.log(element);
+
+        let elementclass = document.getElementsByClassName('container');
+        // console.log(elementclass);
+        // elementclass[0].style.background = "blue";
+        // console.log(element.innerHTML);
+        // console.log(element.innerText);
+        rd = document.getElementsByTagName('div');
+        // console.log(rd);
+        ce = document.createElement('p');
+        ce.innerText = "this is paragraph tag";
+        rd[0].appendChild(ce);
+        // console.log(rd);
+
+
+        // document.links,document.forms,document.scripts,document.url,document.title
+        // document.images,document.domain
+
+            // query selector
+            s1 = document.querySelector('.container');
+            // console.log(s1);
+            s1 = document.querySelectorAll('.container');
+            // console.log(s1);
+
+            function clickdata()
+            {
+                // console.log("you have clicking button");
+            }
+
+            window.onload = function(){
+                // console.log("wondows load");
+            } 
+
+        // 13. Events javascript
+        firstContainer.addEventListener('click', function(){
+            document.querySelectorAll('.container')[0].innerHTML = "<b> call inner html demo</b>";
+            // console.log("clicked button");
+        })
+
+        firstContainer.addEventListener('mouseover', function(){
+            // console.log("mouseover area");
+        })
+
+        firstContainer.addEventListener('mouseout', function(){
+            // console.log("mouseout area");
+        })
+
+        firstContainer.addEventListener('mouseup', function(){
+            // console.log("mouse up this area");
+        })
+
+
+        // 14. function
+            // simple
+        function sum(a,b)
+        {
+            return a+b;
+        }
+
+            // arrow
+        sum = (a,b) => {
+            return a+b;
+        }
+
+        // 15. settimeout and setinterval
+            call = () => {
+                console.log("after 2 second call");
+            }
+            // setTimeout(call,2000);
+            // setInterval(call,2000);
+
+        // 16. localstorage
+            // localstorage seta nd get
+            // let ss = localStorage.setItem("name","rink");
+            // console.log(ls);
+            // let lg = localStorage.getItem("name");
+            // console.log(lg);
+
+            // localStorage.removeItem("name");
+            // localstorage.clear();
+            
+        // 17. json
+        ob = {name:"rinky",length:1}
+        json = JSON.stringify(ob);
+        //  console.log(typeof(json));
+        parsejson = JSON.parse(`{"name":"rinkydmakvana"}`);
+        // console.log(parsejson);
+
+        a = 34;
+        // console.log(`this is template literal ${a}`);
+        </script>
+        
+    </body>
+   
+</html>
